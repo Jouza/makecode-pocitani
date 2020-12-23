@@ -1,13 +1,14 @@
 input.onButtonPressed(Button.A, function () {
     jas = 255
     led.setBrightness(jas)
-    a = randint(1, 5)
-    b = randint(1, 4)
+    vysledek = randint(3, 9)
+    a = randint(2, vysledek)
+    b = vysledek - a
     basic.showNumber(a)
-    basic.pause(500)
+    basic.pause(300)
     basic.showString("+")
     basic.showNumber(b)
-    basic.pause(500)
+    basic.pause(300)
     basic.showString("=")
 })
 input.onButtonPressed(Button.B, function () {
@@ -17,8 +18,8 @@ input.onButtonPressed(Button.B, function () {
 })
 let b = 0
 let a = 0
+let vysledek = 0
 let jas = 0
-basic.showString("AHOJ")
 jas = 255
 basic.forever(function () {
     basic.pause(1000)
